@@ -26,5 +26,8 @@ def check_palindrome(full_number):
                 if is_palindrome(str(full_number4)):
                     print(full_number)
 
-for full_number in range(100000,1000000):
-    check_palindrome(full_number)
+if __name__ == '__main__':
+# Question 2
+    print('Question 2 solution:')
+    for full_number in range(100000,1000000):
+        check_palindrome(full_number)

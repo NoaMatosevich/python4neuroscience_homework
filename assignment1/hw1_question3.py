@@ -27,12 +27,13 @@ def compare_subjects_within_student(subj1_all_students,
                 result_dic[i]=subj1_all_students['subject_name']
         except: #this will be triggered when there is no corresponding student name in the 2 lists, that name will be skipped. 
             continue
-    return result_dic
-    
+    print(result_dic)
+
+if __name__ == '__main__':
+# Question 3
 #each subject is a dictionary containing the subject name, and for each student name there is a 
 # tupple containing the 2 test scores
-
-art={'subject_name':'art', 'Yoni':(80, 67),'Maya':(92, 100), 'Shira':(97, 88), 'Moo':(79, 68), 'Dana':(65,87)}
-physics={'subject_name':'physics', 'Moo':(97, 56),'Maya':(63, 92),'Shira':(99, 75), 'Yoni':(96, 100), 'Yossi':(98, 87)}
-results=compare_subjects_within_student(art, physics)
-print(results)
+    art={'subject_name':'art', 'Yoni':(80, 67),'Maya':(92, 100), 'Shira':(97, 88), 'Moo':(79, 68), 'Dana':(65,87)}
+    physics={'subject_name':'physics', 'Moo':(97, 56),'Maya':(63, 92),'Shira':(99, 75), 'Yoni':(96, 100), 'Yossi':(98, 87)}
+    print('Question 3 solution:')
+    compare_subjects_within_student(art, physics)

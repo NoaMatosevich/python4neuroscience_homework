@@ -24,13 +24,14 @@ def trifeca(word):
     else:
         return False
      
-
-word1='aabbcc'
-word2='abccddee0123'
-word3='llkkbmm'
-word4='aaaazz'
-word5='bbcCdd'
-word6=''
-trif=trifeca(word6)
-print(trif)
+if __name__==__'main':
+    
+    word1='aabbcc'
+    word2='abccddee0123'
+    word3='llkkbmm'
+    word4='aaaazz'
+    word5='bbcCdd'
+    word6=''
+    trif=trifeca(word6)
+    print(f"Question 1 solution: {trif}")
         
