@@ -5,8 +5,7 @@ def trifeca(word):
     returns: bool
     """
     length=len(word)
-    if length==0:
-        return False
+    
     count=0
     for i in range(1,length):
         if word[i]==word[i-1]:
@@ -19,19 +18,12 @@ def trifeca(word):
             if count>=3:
                 return True            
             
-    if count>=3:
-        return True
-    else:
-        return False
+    return False
      
-if __name__==__'main':
-    
-    word1='aabbcc'
-    word2='abccddee0123'
-    word3='llkkbmm'
-    word4='aaaazz'
-    word5='bbcCdd'
-    word6=''
-    trif=trifeca(word6)
-    print(f"Question 1 solution: {trif}")
+if __name__=='__main__':
+    #Question 1
+    test_words=['aabbcc','abccddee0123','llkkbmm','aaaazz','bbcCdd','','abbddcc','aabccddeefgghhiii']
+    for test in test_words:
+        trif=trifeca(test)
+        print(f"Question 1 solution {test}: {trif}")
         

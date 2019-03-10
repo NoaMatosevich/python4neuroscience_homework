@@ -17,17 +17,19 @@ def compare_subjects_within_student(subj1_all_students,
         subj2_all_students[m]=(subj2_all_students[m][1]+subj2_all_students[m][0])/2.0
     # the result dictionary contains the better subject next to each student name
     result_dic={}
-    for i in subj1_all_students:
-        if i=='subject_name':
+    key_1=set(subj1_all_students.keys())
+    key_2=set(subj2_all_students.keys())
+    key_set=set.intersection(key_1,key_2) # the intersection command takes only the values that are common in both sets
+    for i in key_set:
+        if i=='subject_name': #skip the subject name
             continue
-        try: #the try command allows to test the possibility that there is no corresponding student name in subject 2.
-            if subj2_all_students[i]>subj1_all_students[i]:
+        if subj2_all_students[i]>subj1_all_students[i]: #average in subject 2 is higher
                 result_dic[i]=subj2_all_students['subject_name']
-            elif subj2_all_students[i]<subj1_all_students[i]:
+        elif subj2_all_students[i]<subj1_all_students[i]: # average in subject 1 is higher
                 result_dic[i]=subj1_all_students['subject_name']
-        except: #this will be triggered when there is no corresponding student name in the 2 lists, that name will be skipped. 
-            continue
+        
     print(result_dic)
+
 
 if __name__ == '__main__':
 # Question 3
